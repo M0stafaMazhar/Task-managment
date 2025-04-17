@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "27363243-4401-4c43-a90e-1071b43ddeeb",
+		"name": "task manager api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23788611"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Mmmostaddfka\",\r\n    \"email\":\"xyzgamm@mal.com\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"xyz@gammmal.com\",\r\n    \"password\":\"123mnmnn456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get userdata",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZhYTQyOWM3NzU4YmMzMmJiODJlNmUiLCJlbWFpbCI6Inh5ekBnYW1hbC5jb20iLCJpYXQiOjE3NDQ0NzkzMDksImV4cCI6MTc0NDU2NTcwOX0.ZCA9XALCFR9kmO_sUdrvwjsngPshFPCcLgtZc54i6aM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/user-data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"user-data"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "add task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Berer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZhYTQyOWM3NzU4YmMzMmJiODJlNmUiLCJlbWFpbCI6Inh5ekBnYW1hbC5jb20iLCJpYXQiOjE3NDQ0NzkzMDksImV4cCI6MTc0NDU2NTcwOX0.ZCA9XALCFR9kmO_sUdrvwjsngPshFPCcLgtZc54i6aM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Finish frontend\",\r\n  \"description\": \"Complete the react task manager project\",\r\n  \"dueDate\": \"2025-04-30T23:59:59Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZhYTQyOWM3NzU4YmMzMmJiODJlNmUiLCJlbWFpbCI6Inh5ekBnYW1hbC5jb20iLCJpYXQiOjE3NDQ0NzkzMDksImV4cCI6MTc0NDU2NTcwOX0.ZCA9XALCFR9kmO_sUdrvwjsngPshFPCcLgtZc54i6aM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get task details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZhYTQyOWM3NzU4YmMzMmJiODJlNmUiLCJlbWFpbCI6Inh5ekBnYW1hbC5jb20iLCJpYXQiOjE3NDQ0NzkzMDksImV4cCI6MTc0NDU2NTcwOX0.ZCA9XALCFR9kmO_sUdrvwjsngPshFPCcLgtZc54i6aM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/tasks/[taskId]",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"[taskId]"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZhYTQyOWM3NzU4YmMzMmJiODJlNmUiLCJlbWFpbCI6Inh5ekBnYW1hbC5jb20iLCJpYXQiOjE3NDQ0NzkzMDksImV4cCI6MTc0NDU2NTcwOX0.ZCA9XALCFR9kmO_sUdrvwjsngPshFPCcLgtZc54i6aM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"React task\",\r\n  \"description\": \"Complete the frontend task manager project, review the code\",\r\n  \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks/[taskId]",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"[taskId]"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZhYTQyOWM3NzU4YmMzMmJiODJlNmUiLCJlbWFpbCI6Inh5ekBnYW1hbC5jb20iLCJpYXQiOjE3NDQ0NzkzMDksImV4cCI6MTc0NDU2NTcwOX0.ZCA9XALCFR9kmO_sUdrvwjsngPshFPCcLgtZc54i6aM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/tasks/[TaskId]",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"[TaskId]"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
